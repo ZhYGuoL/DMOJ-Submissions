@@ -1,3 +1,3 @@
 # DMOJ-Submissions
 
-DMOJ submissions made by me... not much
+DMOJ submissions in Python made by me... not much
