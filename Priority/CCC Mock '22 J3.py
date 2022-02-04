@@ -38,7 +38,6 @@ for num1, num2 in chars.values():
         crosses += num1*(num2-1)
     else:
         crosses += num1*num2
-
     
 
 print(crosses)
