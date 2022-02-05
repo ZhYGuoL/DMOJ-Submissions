@@ -551,35 +551,66 @@
 # ====
 
 
-from sys import setrecursionlimit
+# from sys import setrecursionlimit
 
-setrecursionlimit(69696969)
+# setrecursionlimit(69696969)
 
 
-n = int(input())
-grid = [list(map(int, input().split())) for _ in range(n)]
+# n = int(input())
+# grid = [list(map(int, input().split())) for _ in range(n)]
 
-dis = [[-1] * (n + 1) for _ in range(n + 1)]
+# dis = [[-1] * (n + 1) for _ in range(n + 1)]
     
 
-def dfs(i, j):
-    if dis[i][j] != -1: 
-        return dis[i][j]
+# def dfs(i, j):
+#     if dis[i][j] != -1: 
+#         return dis[i][j]
     
-    dis[i][j] = 0
-    if i < n - 1 and grid[i + 1][j] < grid[i][j]:
-        dis[i][j] = dfs(i + 1, j) + 1
-    if i > 0 and grid[i - 1][j] < grid[i][j]:
-        dis[i][j] = max(dis[i][j], dfs(i - 1, j) + 1)
-    if j < n - 1 and grid[i][j + 1] < grid[i][j]:
-        dis[i][j] = max(dis[i][j], dfs(i, j + 1) + 1)
-    if j > 0 and grid[i][j - 1] < grid[i][j]:
-        dis[i][j] = max(dis[i][j], dfs(i, j - 1) + 1)
+#     dis[i][j] = 0
+#     if i < n - 1 and grid[i + 1][j] < grid[i][j]:
+#         dis[i][j] = dfs(i + 1, j) + 1
+#     if i > 0 and grid[i - 1][j] < grid[i][j]:
+#         dis[i][j] = max(dis[i][j], dfs(i - 1, j) + 1)
+#     if j < n - 1 and grid[i][j + 1] < grid[i][j]:
+#         dis[i][j] = max(dis[i][j], dfs(i, j + 1) + 1)
+#     if j > 0 and grid[i][j - 1] < grid[i][j]:
+#         dis[i][j] = max(dis[i][j], dfs(i, j - 1) + 1)
     
-    return dis[i][j]
+#     return dis[i][j]
 
-best = -1
-for i in range(n):
-    for j in range(n):
-        best = max(best, dfs(i, j))
-print(best)
+# best = -1
+# for i in range(n):
+#     for j in range(n):
+#         best = max(best, dfs(i, j))
+# print(best)
+
+
+# ===================================================================
+
+from random import randint
+
+interactions = {
+    # 'oneTwo': 0,
+    1: 0,
+    # 'oneThree': 0,
+    2: 0,
+    # 'oneFour': 0,
+    3: 0,
+    # 'twoThree': 0,
+    4: 0,
+    # 'twoFour': 0,
+    5: 0,
+    # 'threeFour': 0
+    6: 0,
+}
+
+
+
+# for _ in range(1000):
+for interaction in range(6):
+    if randint(1, 2) % 2:
+        interactions[interaction] = 1
+
+connected = interactions.copy()
+
+print(interactions)

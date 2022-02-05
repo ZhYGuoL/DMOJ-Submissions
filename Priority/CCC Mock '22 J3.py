@@ -33,6 +33,7 @@ print(maxNum, minNum)
 
 for num1, num2 in chars.values():
     if num1*(num2+1) == maxNum and not maxFound:
+        print(num1, num2)6
         crosses += num1*(num2+1)
     elif num1*(num2-1) == minNum and not minFound:
         crosses += num1*(num2-1)
