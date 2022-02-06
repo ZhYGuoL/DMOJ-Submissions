@@ -20,27 +20,3 @@ elif aTime < bTime:
     print('Andrew wins!')
 else:
     print('Tie!')
-
-
-NumObstacles, aHeight, bHeight = [int(x) for x in input().split()]
-
-aTemp = 0
-bTemp = 0
-
-for _ in range(NumObstacles):
-    obs1, obs2 = [int(x) for x in input().split()]
-    if obs1 < aHeight:
-        aTemp += 1
-    else:
-        aTemp += 2
-    if obs2 < bHeight:
-        bTemp += 1
-    else:
-        bTemp += 2
-
-if aTemp > bTemp:
-    print('Tommy wins!')
-elif aTemp < bTemp:
-    print('Andrew wins!')
-else:
-    print('Tie!')
