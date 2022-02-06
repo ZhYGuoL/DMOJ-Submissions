@@ -9,7 +9,6 @@ for _ in range(n):
 
 for i in pts:
     x1, y1 = i
-
     for j in pts:
         x2, y2 = j
 
