@@ -63,3 +63,11 @@ for o in range(factorial(groupSize)):
 
 sortedRankings = list({k: v for k, v in sorted(teams.items(), key=lambda item: item[1])}.keys())[-1*int(input())]
 print(sortedRankings)
+
+
+
+from sys import stdin
+
+
+data = sys.stdin.read().strip().split('\n')
+

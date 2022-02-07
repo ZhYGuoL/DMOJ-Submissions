@@ -12,33 +12,43 @@ for wordNum in range(2):
 
 maxNum = 0
 minNum = 6969696969
+pair1 = [0, 0]
+pair2 = [0, 0]
 
-print(chars.values())
+total = 0
+
+print(chars)
 for char in chars:
-    num1, num2 = chars[char]
-    # print(num1, num2)
-    maxNum = max(maxNum, num1*(num2+1))
-    if not num1 and num2 > 0:
-        minNum = 0
-    elif not num2:
-        continue
-    else:
-        minNum = min(minNum, num1*(num2-1))
+    if chars[char][0] >= maxNum:
+        pair1 = chars[char]
+        maxNum = chars[char][0]
+    elif chars[char][0] <= minNum and chars[char][1] >= 0:
+        pair2 = chars[char]
+        minNum = chars[char][0]
+    total += chars[char][0]*chars[char][1]
 
-crosses = 0
-maxFound = False
-minFound = False
+print(pair1, pair2)
 
-print(maxNum, minNum)
+# print(total+(pair1[0]*(pair1[1]+1)-pair1[0]*pair[1]))
+print(total+pair1[0]-pair2[0])
 
-for num1, num2 in chars.values():
-    if num1*(num2+1) == maxNum and not maxFound:
-        print(num1, num2)6
-        crosses += num1*(num2+1)
-    elif num1*(num2-1) == minNum and not minFound:
-        crosses += num1*(num2-1)
-    else:
-        crosses += num1*num2
+
+# crosses = 0
+# maxFound = False
+# minFound = False
+
+# print(maxNum, minNum)
+
+# for num1, num2 in chars.values():
+#     if num1*(num2+1) == maxNum and not maxFound:
+#         print(num1, num2)
+#         maxFound = 1
+#         crosses += num1*(num2+1)
+#     elif num1*(num2-1) == minNum and not minFound:
+#         minFound = 1
+#         crosses += num1*(num2-1)
+#     else:
+#         crosses += num1*num2
     
 
-print(crosses)
+# print(crosses)
