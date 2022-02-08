@@ -9,7 +9,7 @@ for wordNum in range(2):
                 chars[char] = [0, 1]
             else:
                 chars[char] = [1, 0]
-
+  
 maxNum = 0
 minNum = 6969696969
 pair1 = [0, 0]
