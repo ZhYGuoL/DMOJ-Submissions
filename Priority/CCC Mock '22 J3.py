@@ -15,6 +15,7 @@ minNum = 6969696969
 pair1 = [0, 0]
 pair2 = [0, 0]
 
+
 total = 0
 
 print(chars)
