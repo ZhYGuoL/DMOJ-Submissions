@@ -1,0 +1,1 @@
+https://dmoj.ca/problem/bgoi09p1
