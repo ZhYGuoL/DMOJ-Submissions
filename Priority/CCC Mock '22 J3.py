@@ -12,8 +12,7 @@ for wordNum in range(2):
   
 maxNum = 0
 minNum = 6969696969
-pair1 = [0, 0]
-pair2 = [0, 0]
+
 
 
 total = 0
@@ -21,10 +20,8 @@ total = 0
 print(chars)
 for char in chars:
     if chars[char][0] >= maxNum:
-        pair1 = chars[char]
         maxNum = chars[char][0]
     elif chars[char][0] <= minNum and chars[char][1] >= 0:
-        pair2 = chars[char]
         minNum = chars[char][0]
     total += chars[char][0]*chars[char][1]
 
@@ -48,8 +45,5 @@ print(total+pair1[0]-pair2[0])
 #     elif num1*(num2-1) == minNum and not minFound:
 #         minFound = 1
 #         crosses += num1*(num2-1)
-#     else:
-#         crosses += num1*num2
-    
-
+#     else: #         crosses += num1*num2
 # print(crosses)
