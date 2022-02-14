@@ -10,3 +10,12 @@ for i in range(useless-1):
     break
 for char in number:
     print(char, end='')
+
+length = int(input())
+num = map(int, input())
+
+for idx in range(length):
+    if idx == 0:
+        continue
+    if number[idx] >= number[idx+1]:
+        print(str(number[:idx-1])+str(number[idx+1])+str(number[idx])+str(number[idx+2:]))
