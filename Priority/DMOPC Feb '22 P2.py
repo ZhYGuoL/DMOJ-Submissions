@@ -1,12 +1,3 @@
-# n, k = input().split(' ')
-# points = input().split('1')
-# points.sort(key = len)
-# counter = 0
-# for i in range(int(k)):
-#     counter += len(points[-(1+i)])
-
-# print(counter)
-
 n, k = list(map(int, input().split(' ')))
 points = input().split('1')
 points.sort(key = len)
