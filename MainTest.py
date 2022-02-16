@@ -586,31 +586,59 @@
 
 
 # ===================================================================
+# *BFS* https://www.educative.io/edpresso/how-to-implement-a-breadth-first-search-in-python
 
-from random import randint
-
-interactions = {
-    # 'oneTwo': 0,
-    1: 0,
-    # 'oneThree': 0,
-    2: 0,
-    # 'oneFour': 0,
-    3: 0,
-    # 'twoThree': 0,
-    4: 0,
-    # 'twoFour': 0,
-    5: 0,
-    # 'threeFour': 0
-    6: 0,
+graph = {
+  'A' : ['B','C'],
+  'B' : ['D', 'E'],
+  'C' : ['F'],
+  'D' : [],
+  'E' : ['F'],
+  'F' : []
 }
 
+visited = [] # List to keep track of visited nodes.
+queue = []     #Initialize a queue
+
+def bfs(visited, graph, node):
+  visited.append(node)
+  queue.append(node)
+
+  while queue:
+    s = queue.pop(0) 
+    print (s, end = " ") 
+
+    for neighbour in graph[s]:
+      if neighbour not in visited:
+        visited.append(neighbour)
+        queue.append(neighbour)
+
+# Driver Code
+bfs(visited, graph, 'A')
 
 
-# for _ in range(1000):
-for interaction in range(6):
-    if randint(1, 2) % 2:
-        interactions[interaction] = 1
+# =========================================================================
+# *DFS* https://www.educative.io/edpresso/how-to-implement-depth-first-search-in-python
 
-connected = interactions.copy()
 
-print(interactions)
+# Using a Python dictionary to act as an adjacency list
+graph = {
+    'A' : ['B','C'],
+    'B' : ['D', 'E'],
+    'C' : ['F'],
+    'D' : [],
+    'E' : ['F'],
+    'F' : []
+}
+
+visited = set() # Set to keep track of visited nodes.
+
+def dfs(visited, graph, node):
+    if node not in visited:
+        print (node)
+        visited.add(node)
+        for neighbour in graph[node]:
+            dfs(visited, graph, neighbour)
+
+# Driver Code
+dfs(visited, graph, 'A')
