@@ -62,3 +62,15 @@ for _ in range(int(input())):
 		coords[coord[0]] = [coord[1]]
 
 print(coords)
+
+
+
+def possibilities(key, size):
+	posSize = 0
+	a = 1
+	while key + a <= size:
+		if range(key+a):
+
+
+for key in coords:
+	print('bruh')
