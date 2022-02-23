@@ -1,3 +1,5 @@
+# https://dmoj.ca/problem/ucc21p3
+
 import sys
 
 size = int(sys.stdin.readline())
