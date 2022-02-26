@@ -4,15 +4,27 @@ numItems, limit = [int(x) for x in sys.stdin.readline().strip('\n').split()]
 items = []
 
 for _ in range(numItems):
-    items.append(input().split())
+    items.append([int(x) for x in sys.stdin.readline().strip('\n').split()])
+    
+# print(items)
 
-sorted(items, lambda x: x[1]/x[0])
+items = sorted(items, key=lambda x: x[1]/x[0], reverse=True)
 
 curCap = 0
 curPoints = 0
 
-for _ in range(len(items)):
-    if items[0] + counter <= limit:
+print(items)
+
+for idx in range(len(items)):
+    items[idx]
+    if items[idx][0] + curCap <= limit:
+        curCap += items[idx][0]
+        curPoints += items[idx][1]
+        if curCap == limit:
+            break
+        
+
+print(curPoints)        
 
 
 
