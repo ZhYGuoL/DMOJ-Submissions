@@ -24,7 +24,7 @@ for idx in range(len(items)):
             break
         
 
-print(curPoints)        
+print(curPoints)
 
 
 
