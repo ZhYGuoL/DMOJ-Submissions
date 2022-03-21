@@ -588,62 +588,63 @@
 # ===================================================================
 # *BFS* https://www.educative.io/edpresso/how-to-implement-a-breadth-first-search-in-python
 
-graph = {
-  'A' : ['B','C'],
-  'B' : ['D', 'E'],
-  'C' : ['F'],
-  'D' : [],
-  'E' : ['F'],
-  'F' : []
-}
+# graph = {
+#   'A' : ['B','C'],
+#   'B' : ['D', 'E'],
+#   'C' : ['F'],
+#   'D' : [],
+#   'E' : ['F'],
+#   'F' : []
+# }
 
-visited = [] # List to keep track of visited nodes.
-queue = []     #Initialize a queue
+# visited = [] # List to keep track of visited nodes.
+# queue = []     #Initialize a queue
 
-def bfs(visited, graph, node):
-  visited.append(node)
-  queue.append(node)
+# def bfs(visited, graph, node):
+#   visited.append(node)
+#   queue.append(node)
 
-  while queue:
-    s = queue.pop(0) 
-    print (s, end = " ") 
+#   while queue:
+#     s = queue.pop(0) 
+#     print (s, end = " ") 
 
-    for neighbour in graph[s]:
-      if neighbour not in visited:
-        visited.append(neighbour)
-        queue.append(neighbour)
+#     for neighbour in graph[s]:
+#       if neighbour not in visited:
+#         visited.append(neighbour)
+#         queue.append(neighbour)
 
-# Driver Code
-bfs(visited, graph, 'A')
+# # Driver Code
+# bfs(visited, graph, 'A')
 
 
 # =========================================================================
 # *DFS* https://www.educative.io/edpresso/how-to-implement-depth-first-search-in-python
 
 
-# Using a Python dictionary to act as an adjacency list
-graph = {
-    'A' : ['B','C'],
-    'B' : ['D', 'E'],
-    'C' : ['F'],
-    'D' : [],
-    'E' : ['F'],
-    'F' : []
-}
+# # Using a Python dictionary to act as an adjacency list
+# graph = {
+#     'A' : ['B','C'],
+#     'B' : ['D', 'E'],
+#     'C' : ['F'],
+#     'D' : [],
+#     'E' : ['F'],
+#     'F' : []
+# }
 
-visited = set() # Set to keep track of visited nodes.
+# visited = set() # Set to keep track of visited nodes.
 
-def dfs(visited, graph, node):
-    if node not in visited:
-        print (node)
-        visited.add(node)
-        for neighbour in graph[node]:
-            dfs(visited, graph, neighbour)
+# def dfs(visited, graph, node):
+#     if node not in visited:
+#         print (node)
+#         visited.add(node)
+#         for neighbour in graph[node]:
+#             dfs(visited, graph, neighbour)
 
-# Driver Code
-dfs(visited, graph, 'A')
+# # Driver Code
+# dfs(visited, graph, 'A')
 
 
+<<<<<<< HEAD
 
 
 
@@ -662,37 +663,42 @@ dfs(visited, graph, 'A')
 # curCap = 0
 # curPoints = 0
 
+=======
+# import sys
+
+# numItems, limit = [int(x) for x in sys.stdin.readline().strip('\n').split()]
+# items = []
+
+# for _ in range(numItems):
+#     items.append(input().split())
+
+# sorted(items, lambda x: x[1]/x[0])
+
+# curCap = 0
+# curPoints = 0
+
+>>>>>>> 87698456106b20a04172aa721fde31b0b37e5200
 # for _ in range(len(items)):
 #     if items[0] + counter <= limit:
 
 
-
-# 3 8
-# 3 30
-# 4 50
-# 5 60
-
-# 90
-
-
-
-# 5 5
-# 1 1000000000
-# 1 1000000000
-# 1 1000000000
-# 1 1000000000
-# 1 1000000000
-
-# 5000000000
-
-
-
-# 6 15
-# 6 5
-# 5 6
-# 6 4
-# 6 6
-# 3 5
-# 7 2
-
-# 17
+# Initialize denominator
+k = 1
+ 
+# Initialize sum
+s = 0
+ 
+for i in range(1000000):
+ 
+    # even index elements are positive
+    if i % 2 == 0:
+        s += 4/k
+    else:
+ 
+        # odd index elements are negative
+        s -= 4/k
+ 
+    # denominator is odd
+    k += 2
+     
+print(s)
