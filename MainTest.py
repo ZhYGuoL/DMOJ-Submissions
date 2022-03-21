@@ -644,13 +644,10 @@
 # dfs(visited, graph, 'A')
 
 
-<<<<<<< HEAD
 
 
 
 
-
-# import sys
 
 # numItems, limit = [int(x) for x in sys.stdin.readline().strip('\n').split()]
 # items = []
@@ -663,21 +660,6 @@
 # curCap = 0
 # curPoints = 0
 
-=======
-# import sys
-
-# numItems, limit = [int(x) for x in sys.stdin.readline().strip('\n').split()]
-# items = []
-
-# for _ in range(numItems):
-#     items.append(input().split())
-
-# sorted(items, lambda x: x[1]/x[0])
-
-# curCap = 0
-# curPoints = 0
-
->>>>>>> 87698456106b20a04172aa721fde31b0b37e5200
 # for _ in range(len(items)):
 #     if items[0] + counter <= limit:
 
