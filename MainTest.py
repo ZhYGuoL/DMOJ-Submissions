@@ -644,21 +644,26 @@ def dfs(visited, graph, node):
 dfs(visited, graph, 'A')
 
 
-import sys
 
-numItems, limit = [int(x) for x in sys.stdin.readline().strip('\n').split()]
-items = []
 
-for _ in range(numItems):
-    items.append(input().split())
 
-sorted(items, lambda x: x[1]/x[0])
 
-curCap = 0
-curPoints = 0
 
-for _ in range(len(items)):
-    if items[0] + counter <= limit:
+# import sys
+
+# numItems, limit = [int(x) for x in sys.stdin.readline().strip('\n').split()]
+# items = []
+
+# for _ in range(numItems):
+#     items.append(input().split())
+
+# sorted(items, lambda x: x[1]/x[0])
+
+# curCap = 0
+# curPoints = 0
+
+# for _ in range(len(items)):
+#     if items[0] + counter <= limit:
 
 
 
