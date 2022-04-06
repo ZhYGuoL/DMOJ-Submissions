@@ -7,7 +7,7 @@
 #                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
 # arr = [64, 34, 25, 12, 22, 11, 90]
 # bubbleSort(arr)
- 
+
 # print ("Sorted array is:")
 # for i in range(len(arr)):
 #     print ("% d" % arr[i])
@@ -37,17 +37,17 @@
 # 		if n / div == n // div:
 # 			if div in divisors:
 # 				divisors[div] += 1
-# 			else: 
+# 			else:
 # 				divisors[div] = 1
-	
+
 # 	# Get 'length' of divisors
 # 	div_len = 0
 # 	for (div, rep) in divisors.items():
 # 		if rep != 1: div_len += len(str(rep))
 # 		div_len += len(str(div))
-	
+
 # 	num_len = len(str(n))
-	
+
 # 	if div_len == num_len:
 # 		return "Equidigital"
 # 	elif div_len < num_len:
@@ -76,18 +76,18 @@
 
 # =====================================================================
 
- # for i in range(len(str(x)))[::-1]:
+# for i in range(len(str(x)))[::-1]:
 
 
- # =====================================================================
+# =====================================================================
 # Reverse the list
 
 # def reverse(self, x: int) -> int:
 # 	revs_number = 0
-# 	while (x > 0):  
-# 		remainder = x % 10 
-# 		revs_number = (revs_number * 10) + remainder  
-# 		x = x // 10  
+# 	while (x > 0):
+# 		remainder = x % 10
+# 		revs_number = (revs_number * 10) + remainder
+# 		x = x // 10
 # 	return(revs_number)
 
 
@@ -103,12 +103,12 @@
 #         if x<0:
 #             x=abs(x)
 #             neg=True
-           
+
 #         revs_number=0
-#         while (x>0):  
-#             remainder=x%10  
-#             revs_number=(revs_number*10)+remainder  
-#             x = x//10  
+#         while (x>0):
+#             remainder=x%10
+#             revs_number=(revs_number*10)+remainder
+#             x = x//10
 #         if revs_number > 2**31-1:
 #             return 0
 #         elif neg:
@@ -251,7 +251,7 @@
 # def sepValue (n, *keys):
 #     for i in range(len(keys)):
 #         n = re.split(keys[i])
-    
+
 #     return(n[12])
 
 
@@ -332,42 +332,42 @@
 # https://dmoj.ca/problem/ccc00j2
 
 
-    # from math import ceil
+# from math import ceil
 
-    # low = int(input())
-    # high = int(input())+1
+# low = int(input())
+# high = int(input())+1
 
-    # def valid(num):
-    #     for i in num:
-    #         if i in ['2', '3', '4', '5', '7']:
-    #             return False
-    #     return True
+# def valid(num):
+#     for i in num:
+#         if i in ['2', '3', '4', '5', '7']:
+#             return False
+#     return True
 
-    # def checkIfSame(num, newNum):
-    #     for i in range(ceil(len(num)/2)):
-    #         if num[i] == newNum[len(num)-i-1]:
-    #             continue
-    #         return False
-    #     return True
+# def checkIfSame(num, newNum):
+#     for i in range(ceil(len(num)/2)):
+#         if num[i] == newNum[len(num)-i-1]:
+#             continue
+#         return False
+#     return True
 
-    # counter = 0
+# counter = 0
 
-    # for num in range(low, high):
-    #     num = [str(x) for x in str(num)]
-    #     if valid(num) == False:
-    #         continue
+# for num in range(low, high):
+#     num = [str(x) for x in str(num)]
+#     if valid(num) == False:
+#         continue
 
-    #     newNum = num.copy()
+#     newNum = num.copy()
 
-    #     for x in range(len(num)):
-    #         if num[x] == '6':
-    #             newNum[x] = '9'
-    #         elif num[x] == '9':
-    #             newNum[x] = '6'
+#     for x in range(len(num)):
+#         if num[x] == '6':
+#             newNum[x] = '9'
+#         elif num[x] == '9':
+#             newNum[x] = '6'
 
-    #     if checkIfSame(num, newNum):
-    #         counter+=1
-    # print (counter)
+#     if checkIfSame(num, newNum):
+#         counter+=1
+# print (counter)
 
 
 # ==============================================================================
@@ -389,7 +389,7 @@
 # DMOJ CCC '21 S2 Modern Art                DONE
 # https://dmoj.ca/problem/ccc21s2
 
-    
+
 # k = lambda:int(input())
 # height = k()
 # width = k()
@@ -482,44 +482,44 @@
 #     zeroxTwo = int(input())
 
 #     num1 = int(gcd(zeroxOne, zeroxTwo))
-    
+
 #     numbersArranged = str(num1) + ' ' + str(int(zeroxOne/num1)) + ' ' + str(int(zeroxTwo/num1))
-    
+
 #     a = num1 + zeroxOne/num1
-    
+
 #     print('! '+ numbersArranged)
-    
+
 # else:
 
 #     print('? 1 2')
 #     zeroxOne = int(input())
-    
+
 #     print('? 1 3')
 #     zeroxTwo = int(input())
-    
+
 #     print('? 2 3')
 #     onexTwo = int(input())
-    
+
 #     num1 = int(sqrt(zeroxOne*zeroxTwo/onexTwo))
 #     num2 = int(zeroxOne/num1)
 #     num3 = int(onexTwo/(zeroxOne/num1))
 #     allNumbersCombined = num1 + num2 + num3
 #     prevNum = num3
 #     numbersArranged = str(num1) + ' ' + str(num2) + ' ' + str(num3) + ' '
-    
+
 #     for curNum in range(4, N):
 #         print('? ' + str(curNum-1) + ' ' + str(curNum))
-    
+
 #         prevNum = int(int(input())/prevNum)
-    
+
 #         numbersArranged += str(prevNum) + ' '
-    
+
 #         allNumbersCombined += prevNum
-    
+
 #     a = 0
 #     for i in range(N+1):
 #         a += i
-    
+
 #     print('! '+ numbersArranged + str(int(a-allNumbersCombined)))
 
 
@@ -560,12 +560,12 @@
 # grid = [list(map(int, input().split())) for _ in range(n)]
 
 # dis = [[-1] * (n + 1) for _ in range(n + 1)]
-    
+
 
 # def dfs(i, j):
-#     if dis[i][j] != -1: 
+#     if dis[i][j] != -1:
 #         return dis[i][j]
-    
+
 #     dis[i][j] = 0
 #     if i < n - 1 and grid[i + 1][j] < grid[i][j]:
 #         dis[i][j] = dfs(i + 1, j) + 1
@@ -575,7 +575,7 @@
 #         dis[i][j] = max(dis[i][j], dfs(i, j + 1) + 1)
 #     if j > 0 and grid[i][j - 1] < grid[i][j]:
 #         dis[i][j] = max(dis[i][j], dfs(i, j - 1) + 1)
-    
+
 #     return dis[i][j]
 
 # best = -1
@@ -605,8 +605,8 @@
 #   queue.append(node)
 
 #   while queue:
-#     s = queue.pop(0) 
-#     print (s, end = " ") 
+#     s = queue.pop(0)
+#     print (s, end = " ")
 
 #     for neighbour in graph[s]:
 #       if neighbour not in visited:
@@ -644,7 +644,10 @@
 # dfs(visited, graph, 'A')
 
 
-# import sys
+
+
+
+
 
 # numItems, limit = [int(x) for x in sys.stdin.readline().strip('\n').split()]
 # items = []
@@ -661,23 +664,31 @@
 #     if items[0] + counter <= limit:
 
 
-# Initialize denominator
-k = 1
- 
-# Initialize sum
-s = 0
- 
-for i in range(1000000):
- 
-    # even index elements are positive
-    if i % 2 == 0:
-        s += 4/k
-    else:
- 
-        # odd index elements are negative
-        s -= 4/k
- 
-    # denominator is odd
-    k += 2
-     
-print(s)
+
+# =========================================================================================
+# Simple Pi
+
+# # Initialize denominator
+# k = 1
+
+# # Initialize sum
+# s = 0
+
+# for i in range(1000000):
+
+#     # even index elements are positive
+#     if i % 2 == 0:
+#         s += 4/k
+#     else:
+
+#         # odd index elements are negative
+#         s -= 4/k
+
+#     # denominator is odd
+#     k += 2
+
+# print(s)
+
+
+# =========================================================================================
+
