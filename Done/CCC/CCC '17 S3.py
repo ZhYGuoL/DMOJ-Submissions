@@ -15,7 +15,7 @@ for i in range(len(individual)-1):
         
         else:
             pair[i + n] += min(individual[i], individual[n])
-
+w
 biggest = 0
 size = 0
 

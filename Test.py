@@ -1,21 +1,22 @@
-def backwards(string):
-    backwards = ""
-    for i in range(len(string)):
-        backwards += string[-(i + 1)]
-    return backwards
+L = 'ABCDEFGHIJKLMNOPQRST'  # letters
+N = '123456789'  # numbers
+S = ''
 
+t = input()
+t = list(t)
 
-def palindromecreator(e):
-    palindrome_count = 1
-    for i in range(len(e)):
-        forwards = e[i:]
-        back = forwards[::-1]
-        for t in range(len(forwards)):
-            if (forwards[t:] in back) or (back[t:] in forwards):
-                palindrome_count = max(palindrome_count, len(forwards) - t)
-    return palindrome_count
+for i in range(len(t)):
+    if t[i] in L:
+        if t[i - 1] in N:
+            t.insert(i, '?')
+t.pop(0)
+# print(t)
 
+for i in t:
+    S += i
 
-wordgenerator = input().lower()
-print(palindromecreator(wordgenerator))
+S = S.replace('+', ' tighten ')
+S = S.replace('-', ' loosen ')
+S = S.replace('?', '\n')
 
+print(S)

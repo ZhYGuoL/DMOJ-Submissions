@@ -18,7 +18,7 @@ for _ in range(int(input())):
         pizza[start] += 1
         pizza[end+1] -= 1
         
-updated = [pizza[0]]        
+updated = [pizza[0]]
 
 for idx in range(1, size):
     updated.append(updated[idx-1]+pizza[idx])
