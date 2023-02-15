@@ -18,4 +18,3 @@ def palindromecreator(e):
 
 wordgenerator = input().lower()
 print(palindromecreator(wordgenerator))
-
