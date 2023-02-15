@@ -15,8 +15,13 @@ t.pop(0)
 for i in t:
     S += i
 
+<<<<<<< HEAD
 S = S.replace('+', ' tighten ')
 S = S.replace('-', ' loosen ')
 S = S.replace('?', '\n')
 
 print(S)
+=======
+wordgenerator = input().lower()
+print(palindromecreator(wordgenerator))
+>>>>>>> 5e0346e1acef0d658655888ca5c68f3c6ef71e63
